@@ -2,7 +2,7 @@
 # Polar Arcondicionados
 
 Projeto desenvolvido para Engenharia de Softwre.
-
+(Para ganhar acesso admin, mude a coluna chamada USER_ISADMIN de false para TRUE.)
 
 ## Deploy
 
@@ -16,6 +16,8 @@ Para o deploy:
   npm run dev
 
   php artisan storage:link
+
+  php artisan db:seed
 ```
 
 
