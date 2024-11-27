@@ -1,0 +1,159 @@
+/* Cores */
+    .text-white {
+        color: white !important;
+    }
+    .text-black {
+        color: black !important;
+    }
+    .text-red {
+        color: red !important;
+    }
+    .text-blue {
+        color: blue !important;
+    }
+    .text-lightblue {
+        color: #478af5 !important;
+    }
+    .text-grey {
+        color: grey !important;
+    }
+    .text-green {
+        color: #29e015 !important;
+    }
+
+    /* Backgrounds */
+    .bg-darkblue {
+        background-color: #1f2937 !important;
+    }
+    .bg-inputblue {
+        background-color: #2a384b !important;
+    }
+    .bg-darkgrey {
+        background-color: #363636;
+    }
+    
+    .negrito { font-weight: bold; }
+
+/* Fim das Cores */
+
+
+/* Tamanhos dos Textos */
+    .font_10 { font-size: 10%; }
+    .font_20 { font-size: 20%; }
+    .font_30 { font-size: 30%; }
+    .font_40 { font-size: 40%; }
+    .font_50 { font-size: 50%; }
+    .font_55 { font-size: 55%; }
+    .font_60 { font-size: 60%; }
+    .font_70 { font-size: 70%; }
+    .font_75 { font-size: 75%; }
+    .font_80 { font-size: 80%; }
+    .font_90 { font-size: 90%; }
+    .font_100 { font-size: 100%; }
+    .font_110 { font-size: 110%; }
+    .font_115 { font-size: 115%; }
+    .font_120 { font-size: 120%; }
+    .font_125 { font-size: 125%; }
+    .font_130 { font-size: 130%; }
+    .font_135 { font-size: 135%; }
+    .font_140 { font-size: 140%; }
+    .font_150 { font-size: 150%; }
+    .font_160 { font-size: 160%; }
+    .font_170 { font-size: 170%; }
+    .font_180 { font-size: 180%; }
+    .font_190 { font-size: 190%; }
+    .font_200 { font-size: 200%; }
+    .font_210 { font-size: 210%; }
+    .font_220 { font-size: 220%; }
+    .font_230 { font-size: 230%; }
+    .font_250 { font-size: 250%; }
+    .font_300 { font-size: 300%; }
+    .font_400 { font-size: 400%; }
+    .font_500 { font-size: 500%; }
+    .font_800 { font-size: 800%; }
+    .font_1000 { font-size: 1000%; }
+/* Fim dos Tamanhos */
+
+/* Alinhamentos */
+    .text-center { text-align: center !important; }
+    .text-left { text-align: left !important; }
+    .text-justify { text-align: justify; }
+    .text-right { text-align: right !important; }
+    .text-top { vertical-align: top !important; }
+    .text-bottom { vertical-align: bottom; }
+    
+    .container {
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .profile{
+        background-color: #ddd;
+        border-radius: 50%;
+        height: 200px;
+        object-fit: cover;
+        width: 200px;  
+    }
+/* Fim dos Alinhamentos */
+
+
+/* Estilos de Botão */
+    .glow-on-hover {
+        width: 200px;
+        height: 40px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: #111;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+    }
+
+    .glow-on-hover:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+
+    .glow-on-hover:active {
+        color: #000
+    }
+
+    .glow-on-hover:active:after {
+        background: transparent;
+    }
+    .glow-on-hover:hover:before {
+        opacity: 1;
+    }
+
+    .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+/* Fim dos Estilos */

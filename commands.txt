@@ -1,0 +1,13 @@
+npm install
+
+npm run build
+
+npm run dev
+
+php artisan optimize:clear    // Serve para limpar o cache das views
+
+php artisan storage:link    // Serve para linkar o storage publico
+(Se for migrar de ambiente, precisa apagar o STORAGE na pasta PUBLIC antes)
+
+// Se quiser popular sua Database com o faker
+php artisan db:seed

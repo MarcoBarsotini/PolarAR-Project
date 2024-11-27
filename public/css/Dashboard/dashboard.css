@@ -1,0 +1,28 @@
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-pic {
+    width: 200px !important;
+    height: 200px !important;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.user-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
