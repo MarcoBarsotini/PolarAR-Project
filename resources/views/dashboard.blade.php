@@ -14,6 +14,11 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
+    @if(session('error'))
+    <div class="container mt-4">
+        <div class="alert alert-danger">{{ session('error') }}</div>
+    </div>
+    @endif
 
     <div class="container text-center" style="margin-bottom: 100px !important;">
         <h1 class="text-white text-center font_230 negrito" style="margin-top: 15px !important; padding-bottom: 15px !important;">Bem-vindo, <strong>{{ $user->name }}</strong>!</h1>

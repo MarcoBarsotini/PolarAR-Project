@@ -10,6 +10,8 @@ use App\Http\Controllers\TermosController;
 use App\Http\Controllers\Mail\ContactController;
 use App\Http\Controllers\Public\PublicUserController;
 
+use App\Http\Controllers\Ordens\OrdemDeServicoController;
+
 //admin
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\AdminUserController;
@@ -75,6 +77,13 @@ Route::middleware('auth')->group(function () {
     Route::post('/contato/send', [ContactController::class, 'send'])->name('contact.send');
 
     Route::get('/manutencao', function () { return view('manutencao'); })->name('manutencao');
+});
+
+Route::middleware(['auth', 'verificar.funcionario.vendedor'])->group(function () {
+    Route::get('/ordem-de-servico/create', [OrdemDeServicoController::class, 'create'])->name('ordem.create');
+    Route::post('/ordem-de-servico', [OrdemDeServicoController::class, 'store'])->name('ordem.store');
+    Route::get('/ordem-de-servico/listar', [OrdemDeServicoController::class, 'index'])->name('ordem.index');
+    Route::get('/ordem-de-servico/{id}', [OrdemDeServicoController::class, 'show'])->name('ordem.show');
 });
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {

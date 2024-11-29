@@ -72,13 +72,9 @@
                             </x-dropdown-link>
                         </form><hr>
                         @if (Auth::user()->user_type === 'funcionario')
-                            <x-dropdown-link :href="route('contracts.accepted')">
+                            <x-dropdown-link :href="route('ordem.index')">
                                 {{ __('Ordens de Serviço') }}
-                            </x-dropdown-link>
-                        @else
-                            <x-dropdown-link :href="route('contracts.requested')">
-                                {{ __('Meus Pedidos') }}
-                            </x-dropdown-link>
+                            </x-dropdown-link>                        
                         @endif
                     </x-slot>
                 </x-dropdown>
