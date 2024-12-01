@@ -7,7 +7,7 @@
 
     <div class="container mt-4">
         <div class="text-center mb-4">
-            <a href="{{route('ordem.create')}}" class="btn btn-success">Novo Contrato</a>
+            <a href="{{route('ordem.create')}}" class="btn btn-success">Nova Ordem</a>
         </div>
         <div class="row">
             <div class="col-12">
