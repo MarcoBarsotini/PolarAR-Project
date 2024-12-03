@@ -3,6 +3,7 @@ use Illuminate\Support\Facades\Route;
 
 //Controladores adicionais do sistema
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Auth\UserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Contracts\ContractController;
 use App\Http\Controllers\CatalogoController;
@@ -84,6 +85,9 @@ Route::middleware(['auth', 'verificar.funcionario.vendedor'])->group(function ()
     Route::post('/ordem-de-servico', [OrdemDeServicoController::class, 'store'])->name('ordem.store');
     Route::get('/ordem-de-servico/listar', [OrdemDeServicoController::class, 'index'])->name('ordem.index');
     Route::get('/ordem-de-servico/{id}', [OrdemDeServicoController::class, 'show'])->name('ordem.show');
+
+    Route::get('/usuarios/create', [UserController::class, 'create'])->name('usuarios.create');
+    Route::post('/usuarios', [UserController::class, 'store'])->name('usuarios.store');
 });
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
